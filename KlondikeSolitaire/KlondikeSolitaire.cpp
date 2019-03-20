@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-	cout << "Welcom to Klondike solitaire! Enjoy!" << endl;
+	cout << "Welcome to Klondike solitaire! Enjoy!" << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
