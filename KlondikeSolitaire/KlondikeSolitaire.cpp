@@ -5,6 +5,7 @@
 #include <iostream>
 
 #include "Card.h"
+#include "Deck.h"
 
 using namespace std;
 
@@ -12,9 +13,13 @@ int main()
 {
 	cout << "Welcome to Klondike solitaire! Enjoy!" << endl;
 
-	Card card = Card(Rank::RANK_5, Suit::SUIT_HEARTS);
+	Deck deck = Deck();
 
-	cout << card.to_string() << endl;
+	deck.create_card(Rank::RANK_5, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_4, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_A, Suit::SUIT_HEARTS);
+
+	cout << deck.to_string() << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
