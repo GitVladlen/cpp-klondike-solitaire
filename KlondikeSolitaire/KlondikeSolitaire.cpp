@@ -72,6 +72,12 @@ int main()
 	deck.create_card(Rank::RANK_A, Suit::SUIT_SPADES);
 	deck.create_card(Rank::RANK_2, Suit::SUIT_SPADES);
 
+	cout << "Before shuffle" << endl;
+	cout << deck.to_string() << endl;
+
+	deck.shuffle();
+
+	cout << "After shuffle" << endl;
 	cout << deck.to_string() << endl;
 }
 

@@ -13,6 +13,8 @@ public:
 	void create_card(int rank, int suit);
 	void destroy_cards();
 
+	void shuffle();
+
 	std::string to_string();
 };
 
