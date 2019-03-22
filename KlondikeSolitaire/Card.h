@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 enum Suit {
 	SUIT_DIAMONDS,
@@ -41,5 +42,7 @@ public:
 	int get_suit() const;
 
 	std::string to_string();
+
+	typedef std::vector<Card*> CardPtrList;
 };
 
