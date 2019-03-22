@@ -15,9 +15,62 @@ int main()
 
 	Deck deck = Deck();
 
-	deck.create_card(Rank::RANK_5, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_3, Suit::SUIT_DIAMONDS);
 	deck.create_card(Rank::RANK_4, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_5, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_6, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_7, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_8, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_9, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_10, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_J, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_Q, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_K, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_A, Suit::SUIT_DIAMONDS);
+	deck.create_card(Rank::RANK_2, Suit::SUIT_DIAMONDS);
+
+
+	deck.create_card(Rank::RANK_3, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_4, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_5, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_6, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_7, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_8, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_9, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_10, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_J, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_Q, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_K, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_A, Suit::SUIT_CLUBS);
+	deck.create_card(Rank::RANK_2, Suit::SUIT_CLUBS);
+
+	deck.create_card(Rank::RANK_3, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_4, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_5, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_6, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_7, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_8, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_9, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_10, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_J, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_Q, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_K, Suit::SUIT_HEARTS);
 	deck.create_card(Rank::RANK_A, Suit::SUIT_HEARTS);
+	deck.create_card(Rank::RANK_2, Suit::SUIT_HEARTS);
+
+	deck.create_card(Rank::RANK_3, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_4, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_5, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_6, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_7, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_8, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_9, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_10, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_J, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_Q, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_K, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_A, Suit::SUIT_SPADES);
+	deck.create_card(Rank::RANK_2, Suit::SUIT_SPADES);
 
 	cout << deck.to_string() << endl;
 }
