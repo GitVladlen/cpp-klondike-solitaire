@@ -4,11 +4,17 @@
 #include "pch.h"
 #include <iostream>
 
+#include "Card.h"
+
 using namespace std;
 
 int main()
 {
 	cout << "Welcome to Klondike solitaire! Enjoy!" << endl;
+
+	Card card = Card(Rank::RANK_5, Suit::SUIT_HEARTS);
+
+	cout << card.to_string() << endl;
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
