@@ -15,14 +15,29 @@ Deck::~Deck()
 	destroy_cards();
 }
 
-void Deck::add_card_front(Card::CardPtr p_card)
+void Deck::push_card_front(Card::CardPtr p_card)
 {
 	m_cards.push_front(p_card);
 }
 
-void Deck::add_card_back(Card::CardPtr p_card)
+void Deck::push_card_back(Card::CardPtr p_card)
 {
 	m_cards.push_back(p_card);
+}
+
+Card::CardPtr Deck::pop_card_front()
+{
+	Card::CardPtr p_front = m_cards.front();
+	m_cards.pop_front();
+
+	return p_front;
+}
+
+Card::CardPtr Deck::pop_card_back()
+{
+	Card::CardPtr p_back = m_cards.back();
+	m_cards.pop_back();
+	return p_back;
 }
 
 void Deck::destroy_cards()

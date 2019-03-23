@@ -10,8 +10,11 @@ public:
 	Deck();
 	~Deck();
 
-	void add_card_front(Card::CardPtr p_card);
-	void add_card_back(Card::CardPtr p_card);
+	void push_card_front(Card::CardPtr p_card);
+	void push_card_back(Card::CardPtr p_card);
+
+	Card::CardPtr pop_card_front();
+	Card::CardPtr pop_card_back();
 
 	void destroy_cards();
 

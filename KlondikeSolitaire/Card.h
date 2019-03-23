@@ -31,16 +31,20 @@ class Card
 private:
 	int m_rank;
 	int m_suit;
+	bool m_is_turned;
 
 private:
 	Card();
 
 public:
-	Card(int rank, int suit);
+	Card(int rank, int suit, bool is_turned=false);
 	~Card();
 
 	int get_rank() const;
 	int get_suit() const;
+
+	bool is_turned() const;
+	void turn();
 
 	std::string to_string();
 
