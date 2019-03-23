@@ -54,13 +54,34 @@ void Deck::shuffle()
 	m_cards.assign(buf.begin(), buf.end());
 }
 
-std::string Deck::to_string()
+std::string Deck::str()
 {
 	std::ostringstream buffer;
-	buffer << "Deck:";
 
-	for (Card::CardPtr p_card : m_cards)
-		buffer << "\n" << p_card->to_string();
+	for (Card::CardPtrList::iterator it = m_cards.begin(); it != m_cards.end(); ++it)
+	{
+		buffer << (*it)->str();
+		if ((*it) != m_cards.back())
+			buffer << ", ";
+	}
+	buffer << ")";
+
+	return buffer.str();
+}
+
+std::string Deck::repr()
+{
+	std::ostringstream buffer;
+
+	buffer << "<Deck:";
+
+	Card::CardPtrList::iterator it;
+	int index;
+
+	for (it = m_cards.begin(), index = 1; it != m_cards.end(); ++it, index++)
+		buffer << "\n " << index<< ": " << (*it)->repr();
+
+	buffer << "\n>";
 
 	return buffer.str();
 }

@@ -20,7 +20,8 @@ public:
 
 	void shuffle();
 
-	std::string to_string();
+	std::string str();
+	std::string repr();
 
 	typedef Deck * DeckPtr;
 };

@@ -38,29 +38,16 @@ void Card::turn()
 	m_is_turned = !m_is_turned;
 }
 
-std::string Card::to_string()
+std::string Card::str()
 {
 	std::ostringstream buffer;
 
-	buffer << "<Card: ";
-
 	if (!is_turned())
 	{
-		buffer << "*-*";
+		buffer << "**";
 	}
 	else
 	{
-		if (m_suit == Suit::SUIT_DIAMONDS)
-			buffer << "D";
-		else if (m_suit == Suit::SUIT_CLUBS)
-			buffer << "C";
-		else if (m_suit == Suit::SUIT_HEARTS)
-			buffer << "H";
-		else if (m_suit == Suit::SUIT_SPADES)
-			buffer << "S";
-
-		buffer << "-";
-
 		if (m_rank <= Rank::RANK_10)
 			buffer << m_rank + 3;
 		else if (m_rank == Rank::RANK_J)
@@ -73,8 +60,25 @@ std::string Card::to_string()
 			buffer << "A";
 		else if (m_rank == Rank::RANK_2)
 			buffer << "2";
-	}	
 
-	buffer << ">";
+		if (m_suit == Suit::SUIT_DIAMONDS)
+			buffer << "D";
+		else if (m_suit == Suit::SUIT_CLUBS)
+			buffer << "C";
+		else if (m_suit == Suit::SUIT_HEARTS)
+			buffer << "H";
+		else if (m_suit == Suit::SUIT_SPADES)
+			buffer << "S";
+	}
+
+	return buffer.str();
+}
+
+std::string Card::repr()
+{
+	std::ostringstream buffer;
+
+	buffer << "<Card: " << str() << ">";
+
 	return buffer.str();
 }

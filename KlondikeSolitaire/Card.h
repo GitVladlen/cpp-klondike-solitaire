@@ -46,7 +46,8 @@ public:
 	bool is_turned() const;
 	void turn();
 
-	std::string to_string();
+	std::string str();
+	std::string repr();
 
 	typedef Card* CardPtr;
 	typedef std::list<CardPtr> CardPtrList;

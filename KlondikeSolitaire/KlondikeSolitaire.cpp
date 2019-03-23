@@ -1,5 +1,7 @@
 ﻿#include "pch.h"
+
 #include <iostream>
+#include <ctime>
 
 #include "Card.h"
 #include "Deck.h"
@@ -73,19 +75,27 @@ Deck::DeckPtr create_deck()
 
 int main()
 {
+	// init seed for random
+	std::srand(unsigned(std::time(0)));
+
+	// print greetings
 	cout << "Welcome to Klondike solitaire! Enjoy!" << endl;
 
-	// Create deck and shuffle it
+	// create deck and shuffle
 	Deck::DeckPtr p_deck = create_deck();
+	p_deck->shuffle();
 
+	// turn up front card
 	Card::CardPtr p_card = p_deck->pop_card_front();
-
 	p_card->turn();
-
 	p_deck->push_card_front(p_card);
 
-	cout << "Deck:" << endl;
-	cout << p_deck->to_string() << endl;
+	// print deck string
+	cout << p_deck->str() << endl;
 
+	// print deck reprasentation
+	cout << p_deck->repr() << endl;
+
+	// clean up
 	delete p_deck;	
 }
